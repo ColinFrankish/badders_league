@@ -8,8 +8,9 @@
   </div> 
   <div class="col-xs-12 lead-info"> 
     <div class="btn-group" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Option 1</button>
-      <button type="button" class="btn btn-default">Option 2</button>
+      <%# button_to "Players", players_path, :class => "btn btn-default", :method => "get" %>
+      <%= link_to "Players", players_path, :class => "btn btn-default", :method => "get" %>
+      <button type="button" class="btn btn-default">Login</button>
       <button type="button" class="btn btn-default">Option 3</button>
     </div>
   </div>
