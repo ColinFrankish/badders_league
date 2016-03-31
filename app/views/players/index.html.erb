@@ -3,3 +3,19 @@
     All Players
   </h1> 
 </section> 
+<section>
+  <% @players.each do |player| %>
+    <tr>
+      <td>
+        <h2>
+          Firstname
+        </h2>
+      </td>
+      <td>
+        <h2>
+          <%= player.firstname %>
+        </h2> 
+      </td>
+    </tr>
+  <% end %>
+</section> 
