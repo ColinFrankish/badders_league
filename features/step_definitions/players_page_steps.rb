@@ -9,3 +9,7 @@ Then(/^I should see a list of all players$/) do
   visit current_path
   expect(page).to have_content "PsychoBill"
 end
+
+Then(/^A link to add a new player$/) do
+  expect(page).to have_link "Add New Badders Player"
+end

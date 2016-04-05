@@ -1,87 +1,97 @@
 <section>
   <div class="container">
-    <h1 class="col-xs-12 text-center">
-      All Players
-    </h1>
+    <div class="row">
+      <h1 class="text-center col-xs-12">
+        All Players
+      </h1>
+    </div>  
+      <div class="row">
+        <h2 class="text-center col-xs-12">
+          <%= link_to "Add New Badders Player"%>
+        </h2>
+    </div> 
   </div>  
+
 </section> 
 <section >
   <div class="container">
-    <table class="table-striped col-xs-12 text-center">
-      <thead>
-        <tr>
-          <td>
-            <h2>
-              Firstname
-            </h2>
-          </td>
-          <td>
-            <h2>
-              Lastname
-            </h2>
-          </td>
-          <td>
-            <h2>
-              Nickname
-            </h2>
-          </td>
-          <td>
-            <h2>
-              Singles W/L
-            </h2>
-          </td>
-          <td>
-            <h2>
-              Doubles W/L
-            </h2>
-          </td>
-          <td>
-            <h2>
-              Something else  
-            </h2>
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <% @players.each do |player| %>
-            <tr>
-              <td>
-                <h3>
-                  <%= player.firstname %>
-                </h3> 
-              </td>
-              <td>
-                <h3>
-                  <%= player.lastname %>
-                </h3> 
-               </td>
-              <td>
-                <h3>
-                  <%= player.nickname %>
-                </h3> 
-              </td>
-              <td>
-                <h3>
-                  <%= player.singles_wins %>
-                  /
-                  <%= player.singles_losses %>
-                </h3> 
-              </td>
-              <td>
-                <h3>
-                  <%= player.doubles_wins %> 
-                  /
-                  <%= player.doubles_losses %>
-                </h3> 
-              </td>
-              <td>
-                <h3>
-                  <%= player.nickname %>
-                </h3> 
-              </td>
-            </tr> 
-          <% end %>
-      </tbody>
-    </table>
+    <div class="row">
+      <table class="table-striped col-xs-12 text-center">
+        <thead>
+          <tr>
+            <td>
+              <h2>
+                Firstname
+              </h2>
+            </td>
+            <td>
+              <h2>
+                Lastname
+              </h2>
+            </td>
+            <td>
+              <h2>
+                Nickname
+              </h2>
+            </td>
+            <td>
+              <h2>
+                Singles W/L
+              </h2>
+            </td>
+            <td>
+              <h2>
+                Doubles W/L
+              </h2>
+            </td>
+            <td>
+              <h2>
+                Something else  
+              </h2>
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @players.each do |player| %>
+              <tr<% link_to "add the path" %>>
+                <td>
+                  <h3>
+                    <%= link_to player.firstname %>
+                  </h3> 
+                </td>
+                <td>
+                  <h3>
+                    <%= player.lastname %>
+                  </h3> 
+                 </td>
+                <td>
+                  <h3>
+                    <%= player.nickname %>
+                  </h3> 
+                </td>
+                <td>
+                  <h3>
+                    <%= player.singles_wins %>
+                    /
+                    <%= player.singles_losses %>
+                  </h3> 
+                </td>
+                <td>
+                  <h3>
+                    <%= player.doubles_wins %> 
+                    /
+                    <%= player.doubles_losses %>
+                  </h3> 
+                </td>
+                <td>
+                  <h3>
+                    <%= player.nickname %>
+                  </h3> 
+                </td>
+              </tr> 
+            <% end %>
+        </tbody>
+      </table>
+    </div>  
   </div>
 </section> 
