@@ -1,21 +1,87 @@
 <section>
-  <h1>
-    All Players
-  </h1> 
+  <container>
+    <h1 class="col-xs-12 text-center">
+      All Players
+    </h1>
+  </container>  
 </section> 
-<section>
-  <% @players.each do |player| %>
-    <tr>
-      <td>
-        <h2>
-          Firstname
-        </h2>
-      </td>
-      <td>
-        <h2>
-          <%= player.firstname %>
-        </h2> 
-      </td>
-    </tr>
-  <% end %>
+<section >
+  <container>
+    <table class="table-striped col-xs-12 text-center">
+      <thead>
+        <tr>
+          <td>
+            <h2>
+              Firstname
+            </h2>
+          </td>
+          <td>
+            <h2>
+              Lastname
+            </h2>
+          </td>
+          <td>
+            <h2>
+              Nickname
+            </h2>
+          </td>
+          <td>
+            <h2>
+              Singles W/L
+            </h2>
+          </td>
+          <td>
+            <h2>
+              Doubles W/L
+            </h2>
+          </td>
+          <td>
+            <h2>
+              Something else  
+            </h2>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @players.each do |player| %>
+            <tr>
+              <td>
+                <h3>
+                  <%= player.firstname %>
+                </h3> 
+              </td>
+              <td>
+                <h3>
+                  <%= player.lastname %>
+                </h3> 
+               </td>
+              <td>
+                <h3>
+                  <%= player.nickname %>
+                </h3> 
+              </td>
+              <td>
+                <h3>
+                  <%= player.singles_wins %>
+                  /
+                  <%= player.singles_losses %>
+                </h3> 
+              </td>
+              <td>
+                <h3>
+                  <%= player.doubles_wins %> 
+                  /
+                  <%= player.doubles_losses %>
+                </h3> 
+              </td>
+              <td>
+                <h3>
+                  <%= player.nickname %>
+                </h3> 
+              </td>
+            </tr> 
+          <% end %>
+      </tbody>
+    </table>
+  </container>
 </section> 
