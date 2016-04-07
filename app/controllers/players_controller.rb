@@ -4,4 +4,7 @@ class PlayersController < ApplicationController
     @players = Player.all
   end
 
+  def new
+    @player = Player.new
+  end
 end
