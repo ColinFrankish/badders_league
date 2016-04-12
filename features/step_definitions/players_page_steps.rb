@@ -33,3 +33,17 @@ Then(/^A new player should be created$/) do
   expect(Player.count).to eq 1
   expect(Player.first.firstname).to eq "Satan"
 end
+
+Then(/^I click 'Edit Player'$/) do
+  click_button 'Edit Player'
+  expect(page).to have_content "Satan"
+end
+
+Then(/^I update and save the player information$/) do
+  fill_in "Last Name", with: "Is a fine fellow"
+  click_button "Update Player"
+end
+
+Then(/^The new player information should be saved$/) do
+  expect(Player.first.lastname).to eq "Is a fine fellow"
+end
