@@ -53,10 +53,10 @@
         </thead>
         <tbody>
           <% @players.each do |player| %>
-              <tr<% link_to "add the path" %>>
+              <tr<% link_to "Make whole row a link??" %>>
                 <td>
                   <h3>
-                    <%= link_to player.firstname %>
+                    <%= link_to player.firstname, player_path(player.id) %>
                   </h3> 
                 </td>
                 <td>

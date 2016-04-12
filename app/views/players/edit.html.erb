@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 new-player">
+      <div>
+        <h1>
+          Edit Badders Demon
+        </h1> 
+      </div>  
+      <%= simple_form_for @player do |player| %>
+        <%= player.input :firstname, label: 'First Name', error: 'Mandatory Field' %>
+        <%= player.input :lastname, label: "Last Name" %>
+        <%= player.input :nickname, placeholder: "'Coach'", label: "Nickname" %>
+        <%= player.button :submit %>
+      <% end %>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 new-player">
+      <button type="button" class="btn btn-secondary">
+        <%= link_to "View All Players",  players_path %>
+      </button>
+    </div>  
+<!--     <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 edit-player">
+      <button type="button" class="btn btn-secondary">
+        <%= link_to "Delete Player",  player_path(@player.id), method: :delete, data: { confirm: "You sure?" } %>
+      </button>
+    </div>  -->
+  </div>  
+</div>  

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 player-names" >
+      <h1>
+        Badders Daemon !
+      </h1> 
+      <h2>
+        First Name: <%= @player.firstname %>
+      </h2>
+      <h2>
+        Last Name: <%= @player.lastname %>
+      </h2>
+      <h2>
+        Nickname: <%= @player.nickname %>
+      </h2>
+    </div>  
+  </div>  
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 new-player">
+      <button type="button" class="btn btn-secondary">
+        <%= link_to "View All Players",  players_path %>
+      </button>
+    </div>  
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 edit-player">
+      <button type="button" class="btn btn-secondary">
+        <%= link_to "Edit Player",  edit_player_path(@player.id) %>
+      </button>
+    </div>  
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 edit-player">
+      <button type="button" class="btn btn-secondary">
+        <%= link_to "Delete Player",  player_path(@player.id), method: :delete, data: { confirm: "You sure?" } %>
+      </button>
+    </div>  
+  </div> 
+</div>  
