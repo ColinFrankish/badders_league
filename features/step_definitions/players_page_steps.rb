@@ -34,16 +34,18 @@ Then(/^A new player should be created$/) do
   expect(Player.first.firstname).to eq "Satan"
 end
 
-Then(/^I click 'Edit Player'$/) do
-  click_button 'Edit Player'
-  expect(page).to have_content "Satan"
+Then(/^I click link "(.*?)"$/) do |link|
+  click_link link
 end
 
-Then(/^I update and save the player information$/) do
-  fill_in "Last Name", with: "Is a fine fellow"
-  click_button "Update Player"
+Then(/^I should see the edit player form$/) do
+  expect(page).to have_content "Edit Badders Demon"
 end
 
-Then(/^The new player information should be saved$/) do
-  expect(Player.first.lastname).to eq "Is a fine fellow"
+Then(/^I change the form details$/) do
+  fill_in "Last Name", with: "Smith"
+end
+
+Then(/^I my player should be updated$/) do
+  pending # express the regexp above with the code you wish you had
 end
