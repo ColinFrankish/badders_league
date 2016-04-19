@@ -14,5 +14,5 @@ Scenario: User can add/edit a new player
   And I click link "Edit Player"
   And I should see the edit player form
   And I change the form details
-  And I click link "Update PLayer"
+  And I click "Update Player"
   Then I my player should be updated

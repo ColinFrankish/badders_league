@@ -47,5 +47,6 @@ Then(/^I change the form details$/) do
 end
 
 Then(/^I my player should be updated$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content "Smith"
+  expect(Player.first.lastname).to eq "Smith"
 end

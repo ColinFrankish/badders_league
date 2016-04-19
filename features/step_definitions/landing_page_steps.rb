@@ -21,3 +21,11 @@ end
 Then(/^I should go to the list of players$/) do
   expect(page).to have_content 'All Players'
 end
+
+Given(/^I click the 'View\/Add Match Scores' button$/) do
+  click_link 'View/Add Match Scores'
+end
+
+Then(/^I should be see a list of previous scores$/) do
+  pending # express the regexp above with the code you wish you had
+end
