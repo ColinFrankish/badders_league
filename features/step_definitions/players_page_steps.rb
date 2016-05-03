@@ -15,6 +15,7 @@ Then(/^A link to add a new player$/) do
 end
 
 Given(/^I click "(.*?)"$/) do |button|
+  # byebug
   click_on button
 end
 

@@ -18,7 +18,11 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :players
-  resources :matches
+  resources :matches 
+
+  get "create_singles_match", to: "matches#create_singles_match", as: :create_singles_match
+  get "create_doubles_match", to: "matches#create_doubles_match", as: :create_doubles_match 
+  
   # Example resource route with options:
   #   resources :products do
   #     member do
