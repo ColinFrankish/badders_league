@@ -3,7 +3,7 @@ Given(/^I am on the matches page$/) do
 end
 
 Then(/^I should see the new match options$/) do
-  expect(page).to have_content "Create New Match"
+  expect(page).to have_content "Create New Singles Match"
 end
 
 Then(/^A link back to the matches page$/) do
@@ -11,12 +11,12 @@ Then(/^A link back to the matches page$/) do
   expect(page).to have_content "Game on"
 end
 
-Given(/^I am on the new match page$/) do
+Given(/^I am on the match page$/) do
   visit "/matches/new"
 end
 
 Given(/^I see options to create a singles or doubles match$/) do
-  expect(page).to have_content "Create Singles Match" and "Create Doubles Match"
+  expect(page).to have_content "Add New Singles Match" and "Add New Doubles Match"
 end
 
 Given(/^I click on "(.*?)"$/) do |arg1|

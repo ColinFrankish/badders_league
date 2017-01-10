@@ -1,10 +1,12 @@
 class MatchesController < ApplicationController
-  def index
+  
+  def initialize
+    @matches = Match.all
   end
 
 
-  def new
-    @match = Match.new
+  def index
+    @matches
   end
 
   def create_singles_match

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'matches/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -18,10 +17,10 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :players
-  resources :matches 
+  resources :matches, only: :index
 
-  get "create_singles_match", to: "matches#create_singles_match", as: :create_singles_match
-  get "create_doubles_match", to: "matches#create_doubles_match", as: :create_doubles_match 
+  get "create_singles_match", to: "matches#create_singles_match"
+  get "create_doubles_match", to: "matches#create_doubles_match"
   
   # Example resource route with options:
   #   resources :products do
